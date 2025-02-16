@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2xqp4bhbl4ib"]
+
+[ext_resource type="Shader" uid="uid://emyk3ag880hm" path="res://mandelbrot_set.gdshader" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://bcp66vylrtcbu" path="res://mandelbrot_set.gd" id="1_ig7tw"]
+[ext_resource type="Gradient" uid="uid://dj1qdtpe6butw" path="res://gradient.tres" id="3_h2yge"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h2yge"]
+shader = ExtResource("1_0xm2m")
+shader_parameter/center = Vector2(0, 0)
+shader_parameter/zoom = 1.0
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1bvp3"]
+gradient = ExtResource("3_h2yge")
+
+[node name="Main" type="Node"]
+
+[node name="MandelbrotSet" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_h2yge")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_ig7tw")
+
+[node name="GradientSprite" type="Sprite2D" parent="MandelbrotSet"]
+texture = SubResource("GradientTexture1D_1bvp3")

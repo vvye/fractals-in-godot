@@ -1,0 +1,7 @@
+[gd_resource type="Gradient" format=3 uid="uid://dj1qdtpe6butw"]
+
+[resource]
+interpolation_mode = 2
+interpolation_color_space = 2
+offsets = PackedFloat32Array(0.0894942, 0.354086, 0.513619, 0.727626, 0.961089, 0.992218)
+colors = PackedColorArray(0.0558, 0.0558, 0.18, 1, 0.0901961, 0.270588, 0.388235, 1, 0.164706, 0.458824, 0.580392, 1, 0.4745, 0.538375, 0.73, 1, 0.97, 0.83614, 0.5238, 1, 0.995143, 0.967611, 0.904968, 1)
