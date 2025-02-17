@@ -55,6 +55,9 @@ void fragment() {
 	if (num_steps >= max_steps - 1) {
 		COLOR = vec4(0.0, 0.0, 0.0, 1.0);
 	} else {
+		// I think this is wrong? I should be dividing num_steps by max_steps
+		// and using that to lerp the position in the palette,
+		// but for some reason this looks better, so hm
 		float val = float(num_steps) / float(textureSize(palette, 0).x);
 		COLOR = texture(palette, vec2(val, 0));
 	}
