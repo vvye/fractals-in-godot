@@ -5,7 +5,7 @@
 ## instead of the _draw function in order to improve performance.
 
 
-@tool
+
 extends ColorRect
 class_name SierpinskiTriangle
 
